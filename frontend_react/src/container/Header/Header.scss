@@ -203,10 +203,19 @@
         letter-spacing: 0.25rem;
         color: orange;
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 700px) {
             margin: 1rem 0;
-            font-size: 3.5rem;
+            text-shadow: 1px 1px 0.3px rgba(0, 0, 0, 0.666);
+            font-size: 2.5rem;
+            letter-spacing: 0.1rem;
         }
+
+        // @media screen and (max-width: 701px) and (min-width: 900px) {
+        //     margin: 1rem 0;
+        //     text-shadow: 1px 1px 0.3px rgba(0, 0, 0, 0.666);
+        //     font-size: 3rem;
+        //     letter-spacing: 0.1rem;
+        // }
     }
 
     @media screen and (max-width: 900px) {
@@ -214,21 +223,6 @@
     }
 }
 
-.app__header-head-tag-first {
-    margin-left: -3rem;
-
-}
-
-.app__header-head-tag-last {
-    padding-left: 6rem;
-    margin-top: 1rem;
-
-    @media screen and (max-width: 900px) {
-        padding-left: 1rem;
-    }
-
-
-}
 
 
 
