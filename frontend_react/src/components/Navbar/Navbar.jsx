@@ -12,7 +12,7 @@ const Navbar = () => {
             <div className='app__navbar-logo'>
                 <div className='app__logo app__flex'>
                     <h3 className='app__logo-first'>{'<'}Kautilya</h3>
-                    <h3 className='app__logo-last'>Bhardwaj{'>'}</h3>
+                    <h3 className='app__logo-last'>Bhardwaj{'/>'}</h3>
                 </div>
 
             </div>
