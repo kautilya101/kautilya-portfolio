@@ -8,10 +8,10 @@ const AppWrap = ( Component, idName, classNames) => function HOC() {
             <SocialMedia styleClass={'app__social'}/>
             <div className='app__wrapper app__flex' >
                 <Component />
-                    <div className='copyright'>
-                        <p className='p-text'>@2023 KAUTILYA</p>
-                        <p className='p-text'>All rights reserved</p>
-                    </div>
+                <div className='copyright'>
+                    <p className='p-text'>@2023 KAUTILYA</p>
+                    <p className='p-text'>All rights reserved</p>
+                </div>
             </div>
             <NavigationDots active={idName} />
         </div>

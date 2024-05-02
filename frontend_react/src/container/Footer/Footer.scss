@@ -66,6 +66,7 @@
     flex-direction: column;
     margin: 1rem 2rem;
 
+
     div{
         width: 100%;
         margin: 0.75rem 0;
@@ -97,6 +98,13 @@
         &:hover{
             box-shadow: 0 0 5px #a8a8a8;
         }
+
+        span{
+          font-size: small;
+          color: red;
+          padding:  0.95rem;
+        }
+
     }
 
     button{
@@ -119,6 +127,15 @@
     }
 }
 
+.app__footer-form-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.app__footer-form-child{
+  align-items: center;
+  width: 100%;
+}
 
 
