@@ -4,24 +4,31 @@ import { AppWrap, MotionWrap } from '../../wrapper';
 import {motion} from 'framer-motion'
 import { urlFor, client } from '../../client';
 import { images } from '../../constants';
-import resume  from '../../assets/resume.pdf'
+// import resume  from '../../assets/resume.pdf'
 const abouts = []
 
 
 const About = () => {
 
-    const [about, setAbout] = useState([])
+    const [resume, setResume] = useState(null)
 
-    useEffect(() => {
-        const query = '*[_type == "abouts"]';
+    async function getResume(){
+      const query = `*[_type == "resume"] {file{asset -> {url}}}`;
+      const resumeData = await client.fetch(query);
+      // console.log(resumeData[0].file.asset.url);
+      return resumeData.length > 0 ? resumeData[0].file.asset.url : null; 
+    }
 
-        client.fetch(query).then((data) => setAbout(data));
+    useEffect(async () => {
+        const resumeFile = await getResume();
+        console.log(resumeFile)
+        setResume(resumeFile);
     },[]);
 
     return (
         <>
             <h2 className='head-text'>
-                Sprint moves <span style={{color:'#313bac' }}> pretty fast</span>. If you don't <br/>look around and<span style={{color:'#313bac' }}> add (;)</span>, you could miss it.
+                Sprint passes <span style={{color:'#313bac' }}> pretty fast</span>. If you don't <br/>look around and<span style={{color:'#313bac' }}> add (;)</span>, you could miss it.
             </h2>
 
             <div className='app__profiles'>
